@@ -135,10 +135,10 @@ body{
 }
 
 .header__title {
-  text-align: center;
-  font-family: "Parisienne", cursive;
-  font-weight: bold;
+  font-family: "Niconne", cursive;
+  font-weight: 400;
   font-style: normal;
+  text-align: center;
 }
 
 .section__content {
@@ -215,7 +215,7 @@ body{
 
 .timeline-content p {
   margin: 0;
-  font-size: 16px;
+  font-size: 1rem;
   color: #666;
 }
 
@@ -487,11 +487,11 @@ textarea:invalid {
 .controllers{
   position: absolute;
   top: 50%;
-  transform: translateY(50%);
-  -webkit-transform: translateY(50%);
-  -moz-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  -o-transform: translateY(50%);
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   width: 100%;
 }
 
@@ -567,6 +567,171 @@ textarea:invalid {
   background-color: #666;
 }
 
+/* footer infomation */
+.details {
+  font-size: 14px;
+  padding: 10px 0 80px 0;
+  color: #000;
+  text-align: center;
+  background-color: #fff;
+}
+
+.details p {
+  margin: 5px 0; /* Espaciado uniforme entre los párrafos */
+  line-height: 1.6; /* Mejora la legibilidad */
+}
+
+.details .copyright {
+  font-weight: 300; /* Texto ligero para el copyright */
+}
+
+.details .autor {
+  font-weight: 400; /* Un poco más grueso para destacar el autor */
+}
+
+.details a {
+  color: #48e; /* Color del enlace */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 500;
+}
+
+.details a:hover {
+  text-decoration: underline; /* Subrayado al pasar el cursor */
+  color: #e67e22; /* Ligera variación de color en hover */
+}
+
+.footer-social {
+  font-size: 28px;
+}
+.footer-social a{
+  margin: 0 5px;
+}
+
+/* Sección ¿Qué hacemos? */
+.que-hacemos {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.que-hacemos h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.feature-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature i {
+  font-size: 2.5rem;
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* Estilo general */
+
+.about-us__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-us__mission-vision {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.mission, .vision {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.section-two__subtitle{
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.mission p, .vision p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.foda-section {
+  text-align: left;
+  margin-top: 40px;
+}
+
+.foda-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.foda-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.foda-item h4 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #ff5722;
+}
+
+.foda-item ul li{
+  margin-bottom: 10px;
+  font-size:1.1rem;
+  list-style: none;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .about-us__mission-vision {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
 
 
 @media screen and (max-width: 768px) {
@@ -685,9 +850,9 @@ textarea:invalid {
     -ms-transition: right 0.3s ease  ;
     -o-transition: right 0.3s ease  ;
     z-index: 900;
-
     display:flex;
     align-items:center;
+    overflow: auto;
   }
   .menu ul {
     list-style-type: none;
@@ -724,41 +889,10 @@ textarea:invalid {
   .menu.active {
     right: 0;
   }
-
-  .details {
-    font-size: 14px;
-    padding: 10px 0 80px 0;
-    color: #000;
-    text-align: center;
-    background-color: #fff;
-  }
-  
-  .details p {
-    margin: 5px 0; /* Espaciado uniforme entre los párrafos */
-    line-height: 1.6; /* Mejora la legibilidad */
-  }
-  .details .copyright {
-    font-weight: 300; /* Texto ligero para el copyright */
-  }
-
-  .details .autor {
-    font-weight: 400; /* Un poco más grueso para destacar el autor */
-  }
-
-  .details a {
-    color: #48e; /* Color del enlace */
-    text-decoration: none; /* Sin subrayado */
-    font-weight: 500;
-  }
-  
-  .details a:hover {
-    text-decoration: underline; /* Subrayado al pasar el cursor */
-    color: #e67e22; /* Ligera variación de color en hover */
-  }
   
   .social-bar {
     top: auto;
-    /*quitareltopanterior*/left: 50%;
+    left: 50%;
     bottom: 0;
     flex-direction: row;
     transform: translate(-50%,0) scale(1);
@@ -802,4 +936,5 @@ textarea:invalid {
   .details {
     font-size: 12px;
   }
+
 }

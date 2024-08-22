@@ -152,6 +152,11 @@ body{
 
 .section {
   margin-bottom: 100px;
+  scroll-margin-top: 100px;
+  padding-top:-70px;
+}
+
+.enterfade {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -159,14 +164,20 @@ body{
   -moz-transform: translateY(20px);
   -ms-transform: translateY(20px);
   -o-transform: translateY(20px);
-  scroll-margin-top: 100px;
-  padding-top:-70px;
+  -webkit-transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  -moz-transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  -ms-transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  -o-transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 /* Estilo aplicado cuando la sección está en vista */
-.section.inview {
+.enterfade.inview {
   opacity: 1;
   transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
 }
 
 
@@ -478,17 +489,13 @@ textarea:invalid {
   margin: 0 auto;
 }
 
-.slide {
-  width: 100%;
-  background-color: red;
-}
 
 .slide img {
-  height: 100%;
   display: none;
   width: 100%;
-  object-position: cover;
+  object-fit: cover;
   transition: all 1s ease;
+  aspect-ratio: 16/9;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -ms-transition: all 1s ease;
@@ -498,6 +505,10 @@ textarea:invalid {
 .slide.active img{
   display: block;
   transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
 }
 
 
@@ -868,7 +879,7 @@ textarea:invalid {
     -o-transition: right 0.3s ease  ;
     z-index: 900;
     display:flex;
-    align-items:center;
+    align-items:start;
     overflow: auto;
   }
   .menu ul {
@@ -953,5 +964,6 @@ textarea:invalid {
   .details {
     font-size: 12px;
   }
+
 
 }

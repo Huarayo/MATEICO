@@ -68,12 +68,36 @@ strong {
   -o-transition: background-color 0.3s ease;
 }
 
-.button:hover {
+.button:hover,
+.container-button > a:hover{
   background-color: var(--secondary-color);
 }
 
-.button:active {
+.button:active,
+.container-button > a:active{
   transform: scale(0.98);
+}
+
+.container-button a {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor:pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
 }
 
 .container-button {

@@ -5,7 +5,7 @@ const { validateForm } = require('../middlewares/validationMiddleware.js')
 const router = express.Router();
 
 // Ruta POST para procesar el formulario con validaciones
-router.post('/contact',validateForm,sendContactEmail);
+router.post('/',validateForm,sendContactEmail);
 
 
 module.exports = router;

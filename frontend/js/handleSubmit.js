@@ -126,6 +126,8 @@ form.addEventListener("submit",(e)=>{
         body: JSON.stringify(formData),
         mode: 'cors'
       });
+
+      console.log(apiUrl)
       
       const result = await response.json();
 

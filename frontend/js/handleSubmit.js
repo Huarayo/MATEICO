@@ -109,9 +109,9 @@ form.addEventListener("submit",(e)=>{
 
   async function EnviarDatos() {
     try {
-      const apiUrl = process.env.NODE_ENV === 'production'
-        ? 'https://mateico.vercel.app/api/contact'
-        : 'http://localhost:3000/api/contact'
+      const apiUrl = window.location.hostname === 'localhost'
+        ? 'http://localhost:3000/api/contact'
+        : 'https://mateico.vercel.app/api/contact'
 
       const response = await fetch(apiUrl, {
         method: 'POST',

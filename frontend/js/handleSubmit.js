@@ -17,6 +17,7 @@ const responseMessage = document.querySelector('.responseMessage');
 form.addEventListener("submit",(e)=>{
   
   e.preventDefault();
+  btn.disabled = true;
   
   function resetearInputs() {
     document.getElementById('nombre').value = '';
@@ -57,13 +58,13 @@ form.addEventListener("submit",(e)=>{
     if(!formData.mensaje) {
       errores.push('El mensaje es obligatorio');
     } else if (formData.mensaje.length < 5) {
-      errores.push('El mensaje debe tener al menos 10 caracteres');
+      errores.push('El mensaje debe tener al menos 5 caracteres');
     }
     
     if(formData.telefono && !validarTelefono(formData.telefono)) {
       errores.push('El número de teléfono no es válido');
     }
-
+    btn.disabled = false;
     return errores;
   }
   
@@ -74,7 +75,8 @@ form.addEventListener("submit",(e)=>{
 
   function validarTelefono(telefono) {
     const regex = /^\d{10}$/;
-    regex.test(telefono)
+    regex.test(telefono);
+    return regex
   }
 
   function responseHTML(operation, errores) {
@@ -106,10 +108,13 @@ form.addEventListener("submit",(e)=>{
     EnviarDatos();
   }
 
+  console.log(window.location.hostname);
+
 
   async function EnviarDatos() {
     try {
-      const apiUrl = window.location.hostname === 'localhost'
+      //ojo hostaname partecita de url ej: localhost
+      const apiUrl = window.location.hostname === '127.0.0.1'
         ? 'http://localhost:3000/api/contact'
         : 'https://mateico.vercel.app/api/contact'
 
@@ -135,6 +140,8 @@ form.addEventListener("submit",(e)=>{
 
     }catch(err) {
       responseHTML('error', [err.message])
+    }finally {
+      btn.disabled = false;
     }
     
   }

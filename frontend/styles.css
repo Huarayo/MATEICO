@@ -57,25 +57,30 @@ strong {
   border-radius: 8px;
   cursor:pointer;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease-out;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  -ms-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
 }
 
 .button:hover,
 .container-button > a:hover{
-  background-color: var(--secondary-color);
+  background-color: var(--);
 }
 
-.button:active,
-.container-button > a:active{
-  transform: scale(0.98);
+
+.button.active {
+  background-color: var(--secondary-color);
+  transform: scale(0.96) translateY(2px);
+  -webkit-transform: scale(0.96) translateY(2px);
+  -moz-transform: scale(0.96) translateY(2px);
+  -ms-transform: scale(0.96) translateY(2px);
+  -o-transform: scale(0.96) translateY(2px);
 }
 
 .container-button a {
@@ -165,7 +170,7 @@ strong {
   gap: 0.5em;
   color: var(--color-1);
   padding: 15px 20px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://i.pinimg.com/originals/1f/c0/5f/1fc05f051e5d29c30e58d09933b3abd1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/headerSuper.jpg');
   background-size: cover; /* Para que la imagen ocupe todo el contenedor */
   background-position: center;
   height: 100vh;
@@ -389,6 +394,10 @@ textarea:invalid {
   border-color: #e63946;
 }
 
+
+.responseMessage {
+  text-align: left;
+}
 /* Estilo de los mensajes de error (si se usan) */
 /* Estilo de los mensajes de error */
 .error {
@@ -406,18 +415,20 @@ textarea:invalid {
   display: block;
 }
 
-.error p {
-  display: block;
+
+.error p, .success p {
   margin: 5px 0;
   font-size: 1rem;
   letter-spacing: 0;
+  margin-right: auto;
 }
 
 /* Icono dentro del mensaje */
-.error::before {
+.error p::before {
   content: '❌'; /* Puedes reemplazarlo con un icono SVG o de FontAwesome */
   margin-right: 12px;
-  font-size: 1.5rem;
+  font-size: 1.5rem;    
+  
 }
 
 /* Estilo de los mensajes de éxito */
@@ -430,18 +441,19 @@ textarea:invalid {
   margin-bottom: 20px;
   border-left: 6px solid #c3e6cb; /* Barra de color para acento */
   border-radius: 8px;
-  display: flex;
-  align-items: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.5s ease;
-  text-align: left;
 }
 
 /* Icono dentro del mensaje */
-.success::before {
+.success p::before {
   content: '✅'; /* Puedes reemplazarlo con un icono SVG o de FontAwesome */
   margin-right: 12px;
   font-size: 1.5rem;
+}
+
+.success ,.error{
+  text-align: left;
 }
 
 /* Animación para suavizar la aparición del mensaje */
@@ -545,7 +557,6 @@ textarea:invalid {
   border-left: 5px solid #dc3545;
 }
 
-
 .slides {
   position: relative;
   width: 100%;
@@ -580,12 +591,12 @@ textarea:invalid {
 .controllers{
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+  transform: translateY(50%);
   width: 100%;
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
 }
 
 .controllers button {
@@ -622,7 +633,6 @@ textarea:invalid {
 
 .prev-btn {
   position: absolute;
-  top:-50%;
   left: 0;
 }
 

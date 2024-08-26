@@ -109,7 +109,11 @@ form.addEventListener("submit",(e)=>{
 
   async function EnviarDatos() {
     try {
-      const response = await fetch('http://localhost:3000/api/contact', {
+      const apiUrl = process.env.NODE_ENV === 'production'
+        ? 'https://mateico.vercel.app/api/contact'
+        : 'http://localhost:3000/api/contact'
+
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,4 +1,4 @@
 
 exports.textController = (req, res) => {
-  res.end('hola mundo')
+  res.send('hola mundo cruel')
 }

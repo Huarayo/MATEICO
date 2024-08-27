@@ -5,6 +5,6 @@ const router = express.Router();
 
 //Usa las rutas imoprtantadas
 
-router.use('/contact', contactController.sendContactEmail);
+router.use('/contact', contactRoutes);
 
 module.exports = router;

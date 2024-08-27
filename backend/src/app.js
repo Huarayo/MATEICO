@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const contactRoutes = require('./routes/index');
+const routes = require('./routes/index');
 const  app = express();
 
 
@@ -14,6 +14,6 @@ app.use(express.json());
 
 
 //Rutas
-app.use('/api', contactRoutes);
+app.use('/api', routes);
 
 module.exports = app;

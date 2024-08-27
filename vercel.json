@@ -7,10 +7,8 @@
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/backend/src/server.js"
-    }
-  ],
-  "ignoreCommand": "git subtree push --prefix backend"
+    { "src": "/api/(.*)", "dest": "backend/src/server.js" },
+    { "src": "/(.*)", "dest": "frontend/$1" }
+  ]
+
 }

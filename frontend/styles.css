@@ -557,14 +557,17 @@ textarea:invalid {
   border-left: 5px solid #dc3545;
 }
 
-.slides {
+.slider-container {
   position: relative;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  background-color: gray;
 }
 
+.slides {
+  background-color: gray;
+
+}
 
 .slide img {
   display: none;

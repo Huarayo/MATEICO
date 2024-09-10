@@ -17,3 +17,16 @@ document.addEventListener('touchmove', () => {
   lastScrollPosition = currentScrollPosition;
 });
 
+document.addEventListener('scroll', ()=> {
+  const currentScrollPosition = window.scrollY;
+
+  if( currentScrollPosition > lastScrollPosition ) {
+    socialBar.classList.add('visible');
+  } else {
+    socialBar.classList.remove('visible');
+  }
+
+  lastScrollPosition = currentScrollPosition;
+
+})
+

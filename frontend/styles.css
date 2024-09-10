@@ -493,7 +493,7 @@ textarea:invalid {
 }
 
 .social-icon {
-  padding: 10px;
+  padding: 10px 15px;
   margin: 5px 0 0 0;
   color: white;
   border-radius: 0 5px 5px 0;
@@ -507,7 +507,36 @@ textarea:invalid {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   text-align: center;
+  animation: subtleShift 1s ease-out;
+  -webkit-animation: subtleShift 1s ease-out;
 }
+
+
+@keyframes subtleShift {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+}
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.7;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+}
+
+
 
 .social-icon:hover {
   background-color: #555;
@@ -520,7 +549,8 @@ textarea:invalid {
 
 /* Iconos personalizados */
 .social-icon i {
-  font-size: 20px;
+  font-size: 2rem;
+  animation: colorShift 4s linear infinite, glowEffect 1.5s ease-in-out infinite;
 }
 
 /* Colores específicos para cada red social */
@@ -528,18 +558,10 @@ textarea:invalid {
   background-color: #25D366;
 }
 
-.tiktok {
-  background-color: #010101;
-}
 
 .instagram {
   background-color: #e4405f;
 }
-
-.linkedin {
-  background-color: #0077b5;
-}
-
 
 .foda-strengths {
   border-left: 5px solid #28a745;
@@ -1071,7 +1093,7 @@ textarea:invalid {
     -moz-transition: opacity 1s ease, transform 1s ease;
     -ms-transition: opacity 1s ease, transform 1s ease;
     -o-transition: opacity 1s ease, transform 1s ease;
-  }
+}
 
   .social-bar.visible {
     transform: translate(-50%,100px) scale(0);
@@ -1090,6 +1112,7 @@ textarea:invalid {
     -ms-border-radius: 5px 5px 0 0;
     -o-border-radius: 5px 5px 0 0;
   }
+
 
   .social-icon:hover {
     transform: translateY(-5px);

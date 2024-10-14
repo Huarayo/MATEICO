@@ -172,7 +172,7 @@ strong {
   padding: 15px 20px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('./images/headerOriginal.png');
   background-size: cover; /* Para que la imagen ocupe todo el contenedor */
-  background-position: center;
+  background-position: left;
   height: 100vh;
 }
 
@@ -1117,9 +1117,9 @@ textarea:invalid {
 
   .header {
     height: 100dvh;
-    display: flex; /* Si estás usando gap */
-    gap: 30px;
-    color: #f0f0f0
+    display: flex;
+    /*Siestásusandogap*/gap: 30px;
+    color: #f0f0f0;
   }
 
   .header__title {
@@ -1318,4 +1318,17 @@ textarea:invalid {
   }
 
 
+}
+
+
+@media screen and (max-width: 768px) {
+  .header {
+    height: 100dvh;
+    display: flex;
+    gap: 30px;
+    color: #f0f0f0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('./images/header2.png');
+    background-position: top;
+    background-size: cover;
+}
 }

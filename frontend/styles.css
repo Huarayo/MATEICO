@@ -1330,5 +1330,5 @@ textarea:invalid {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('./images/header2.png');
     background-position: top;
     background-size: cover;
-}
+  }
 }

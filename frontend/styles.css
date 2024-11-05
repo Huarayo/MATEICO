@@ -455,8 +455,8 @@ strong {
 
 /* Colores de las caras */
 .front {
-  background-color: #4caf50; /* Verde */
-  transform: translateZ(200px); /* Mueve la cara al frente */
+  background-color: #4caf50;
+  /*Verde*/transform: translateZ(200px);
 }
 
 .back {
@@ -1477,5 +1477,40 @@ textarea:invalid {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('./images/header2.png');
     background-position: top;
     background-size: cover;
+  }
+
+  .cube {
+    width: 200px;
+    height: 200px;
+  }
+
+  .face {
+    width: 200px;
+    height: 200px;
+    text-align: center
+  }
+  
+  /* Colores de las caras */
+  .front {
+    /*Verde*/transform: translateZ(100px);
+  }
+
+  .back {
+    /*Rojo*/transform: rotateY(180deg) translateZ(100px);
+  }
+
+  .left {
+    /*Azul*/transform: rotateY(-90deg) translateZ(100px);
+  }
+
+  .right {
+    /*Naranja*/transform: rotateY(90deg) translateZ(100px);
+  }
+
+  .top {
+    /*Morado*/transform: rotateX(90deg) translateZ(100px);
+  }
+  .bottom {
+    transform: rotateX(-90deg) translateZ(100px);
   }
 }

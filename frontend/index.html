@@ -25,6 +25,9 @@
   <meta property="og:image" content="https://http2.mlstatic.com/D_NQ_NP_611212-MLA44530248945_012021-O.jpg"/>
   <meta property="og:site_name" content="MATEICO"/>
   <meta property="og:locate" content="es_AR"/>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 </head>
 <body>
   <div class="menu-toggle">
@@ -232,44 +235,9 @@
     <section class="section" id="products">
       <h2 class="section__subtitle">Productos</h2>
       <div class="cards">
-        <div class="card card-sostenibility">
-          <div class="image-container">
-            <img data-src="./images/yerberazucarea.jpg" class="lazy" alt="Azucarera hecha a mano con telas de jeans. Precio desde $3500" id="myImage">
-            <span class="overlay">Ver Imagen</span>
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">Yerbera y Azucarera</h3>
-            <p class="card-description"></p>
-            <p class="card-price">Desde $4500</p>
-            <a href="https://wa.me/542613028655?text=Hola%21%20Estoy%20interesado%20en%20hacer%20un%20pedido.%20%C2%BFPodr%C3%ADas%20ayudarme%3F" class="card-button"><i class="fa-brands fa-whatsapp"></i> Lo quiero encargar</a>
-          </div>
-        </div>
-        <div class="card card-sostenibility">
-          <div class="image-container">
-            <img data-src="./images/azucarera.jpg" class="lazy" alt="Azucarera hecha a mano con telas de jeans. Precio desde $3500" id="myImage">
-            <span class="overlay">Ver Imagen</span>
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">Azucarera</h3>
-            <p class="card-description">Hecho a mano con telas de Jeans</p>
-            <p class="card-price">Desde $3000</p>
-            <a href="https://wa.me/542613028655?text=Hola%21%20Estoy%20interesado%20en%20hacer%20un%20pedido.%20%C2%BFPodr%C3%ADas%20ayudarme%3F" class="card-button"><i class="fa-brands fa-whatsapp"></i> Lo quiero encargar</a>
-          </div>
-        </div>
-        <div class="card card-sostenibility">
-          <div class="image-container">
-            <img data-src="./images/yerbera.jpg" class="lazy" alt="Yerbera hecha a mano con telas de jeans. Precio desde $3500"id="myImage">
-            <span class="overlay">Ver Imagen</span>
-          </div>
-          <div class="card-content">
-            <h3 class="card-title">Yerbera</h3>
-            <p class="card-description">Hecho a mano con telas de Jeans </p>
-            <p class="card-price">Desde $3000</p>
-            <a href="https://wa.me/542613028655?text=Hola%21%20Estoy%20interesado%20en%20hacer%20un%20pedido.%20%C2%BFPodr%C3%ADas%20ayudarme%3F" class="card-button"><i class="fa-brands fa-whatsapp"></i> Lo quiero encargar</a>
-          </div>
-        </div>
-      
+
       </div>
+      <div class="pagination"></div>
     </section>
     
     <!-- Justificación E-commerce -->
@@ -322,6 +290,38 @@
       </div>
     </section>
 
+    <section class="section">
+      <h2 class="section__subtitle">Contratos Societarios</h2>
+      <div class="timelineImpositiva">
+        <div id="sas" class="item">
+            <div class="icon">📄</div>
+            <h3>Constitución de la S.A.S.</h3>
+            <div class="detailsImpositiva">La S.A.S. es una sociedad por acciones simplificada. Su capital está dividido por acciones.</div>
+        </div>
+        <div id="afip" class="item">
+            <div class="icon"><img src="./images/afip.png" alt="afip"></div>
+            <h3>Inscripción en AFIP</h3>
+            <div class="detailsImpositiva">Nos registramos en la AFIP para generar el alta en impuestos y utilizar los sistemas web.</div>
+        </div>
+        <div id="atm" class="item">
+            <div class="icon"><img src="./images/original/atm.jfif" width="500px" alt=""></div>
+            <h3>Inscripción en ATM</h3>
+            <div class="detailsImpositiva">Inscripción en la ATM para tributar los ingresos brutos en la provincia de Mendoza.</div>
+        </div>
+        <div id="municipal" class="item">
+            <div class="icon">🏢</div>
+            <h3>Habilitación Municipal</h2>
+            <div class="detailsImpositiva">Autorización para el funcionamiento de un local, oficina, o establecimiento comercial.</div>
+        </div>
+        <div id="factura" class="item">
+            <div class="icon">🧾</div>
+            <h3>Factura B</h3>
+            <div class="detailsImpositiva">Factura utilizada para operaciones comerciales entre responsables inscriptos y el consumidor final o exento en IVA.</div>
+        </div>
+    </div>
+
+    </section>
+
     <!-- Derechos del consumidor -->
     <section class="section">
       <h2 class="section__subtitle">Derechos del consumidor</h2>
@@ -342,7 +342,6 @@
 
     
     </section>
-    <script src="./js/cube.js"></script>
     
     <!-- Contáctanos -->
     <section class="section enterfade" id="contact">
@@ -382,9 +381,11 @@
       </div>
     </div>
   </footer>
-  <script src="./js/cargarCartasMates.js"></script>
-<script src="./js/menuHamburger.js"></script>
-<script src="./js/social-bar.js"></script>
+  <script src="./js/cube.js"></script>
+  <script src="./js/three.js"></script>
+  <!-- <script src="./js/cargarCartasMates.js"></script> -->
+  <script src="./js/menuHamburger.js"></script>
+  <script src="./js/social-bar.js"></script>
 <script src="./js/slider.js"></script>
 <script src="./js/accordion.js"></script>
 <script src="./js/intersectionObserver.js"></script>
@@ -392,6 +393,8 @@
 <script src="./js/scrollBehavior.js"></script>
 <script src="./js/lazyLoad.js"></script>
 <script src="./js/handleSubmit.js"></script>
-<script src="./js/banner.js"></script>
+<script src="./js/paginacion.js" type="module"></script>
+<script src="./js/banner.js" type="module"></script>
+
 </body>
 </html>

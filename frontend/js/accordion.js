@@ -23,4 +23,5 @@ document.querySelectorAll('.accordion-header').forEach(header => {
       content.style.maxHeight = null;
     }
   })
-})
+});
+

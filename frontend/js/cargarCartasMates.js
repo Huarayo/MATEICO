@@ -29,7 +29,7 @@ for(let i = 0; i < cardImg.length; i++) {
   // agregar al nodo el html no texto
   node.innerHTML = `
   <div class="image-container">
-    <img data-src="./images/${cardImg[i].src}" class="lazy" alt="${cardImg[i].alt}" id="myImage">
+    <img data-src="./images/${cardImg[i].src}"  alt="${cardImg[i].alt}" id="myImage">
     <span class="overlay">Ver Imagen</span>
   </div>
   <div class="card-content">

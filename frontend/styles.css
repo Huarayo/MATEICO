@@ -587,6 +587,8 @@ strong {
 
 .mateicoLogo {
   object-fit: cover;
+  max-width: 400px;
+  width: 100%;
 }
 
 /* Colores de las caras */
@@ -1664,4 +1666,6 @@ textarea:invalid {
   .bottom {
     transform: rotateX(-90deg) translateZ(100px);
   }
+
+
 }

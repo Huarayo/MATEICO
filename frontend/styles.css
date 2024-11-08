@@ -1328,7 +1328,9 @@ textarea:invalid {
   font-size:1.1rem;
   list-style: none;
 }
-
+.menu ul li a:hover {
+  background-color: var(--secondary-color);;
+}
 .menu ul li a.active {
   background-color: var(--secondary-color);;
 }
@@ -1369,6 +1371,7 @@ textarea:invalid {
     -moz-transition: top 0.3s;
     -ms-transition: top 0.3s;
     -o-transition: top 0.3s;
+
 }
 
   .menu.hidden {
@@ -1523,7 +1526,7 @@ textarea:invalid {
     -moz-transition: right 0.3s ease;
     -ms-transition: right 0.3s ease;
     -o-transition: right 0.3s ease;
-    z-index: 900;
+    z-index: 1500;
     display:flex;
     align-items:start;
     overflow: auto;

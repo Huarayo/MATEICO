@@ -431,6 +431,7 @@ strong {
 
 /* Estilos Derechos del Consumidor */
 .organigrama {
+  display: block;
   margin: 0 auto;
   max-width: 800px;
   width: 100%;

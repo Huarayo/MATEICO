@@ -436,6 +436,7 @@ strong {
   width: 100%;
   height: 600px;
   border: 1px dashed #000;
+  touch-action: manipulation
 }
 
 /* Centra el cubo en la pantalla */

@@ -1692,5 +1692,8 @@ textarea:invalid {
     transform: rotateX(-90deg) translateZ(100px);
   }
 
+  .organigrama{
+    height: 200px;
+  }
 
 }

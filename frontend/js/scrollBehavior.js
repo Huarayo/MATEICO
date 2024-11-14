@@ -40,3 +40,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+//ORGANIGRAMA ESTATICO SI SE QUIERE QUE HAYA INTERACCIÓN CON EL
+
+const iframe = document.querySelector('.organigrama');
+
+
+
+iframe.addEventListener('mouseenter', () => {
+  document.body.style.overflow = 'hidden';
+  document.querySelector('.menu').style.opacity = '0'
+})
+
+
+
+iframe.addEventListener('mouseleave', function() {
+  // Restaurar el desplazamiento de la página principal cuando el cursor sale del iframe
+  document.body.style.overflow = 'auto';
+  document.querySelector('.menu').style.opacity = '1'
+
+});
+
+
+// Para detectar cuando el usuario comienza a tocar el iframe
+// iframe.addEventListener('touchstart', () => {
+//   document.body.style.overflow = 'hidden';
+// }, { passive: true });
+
+// // Para detectar cuando el usuario termina de tocar el iframe
+// iframe.addEventListener('touchend', () => {
+//   document.body.style.overflow = 'auto';
+// }, { passive: true });
